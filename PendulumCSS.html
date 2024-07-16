@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendulum</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+   
+        body {
+            width: 100%;
+            height: auto;
+            background: linear-gradient(to right, #ff32ad, #8a687e); 
+
+        }
+
+        body .maindiv {
+            height: 3vh;
+            width: 500px;
+            background-color:plum;
+            margin: 10vh auto 0 auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .maindiv div {
+            width: 2px;
+            height: 40vh;
+            background-color:plum;
+            position: relative;
+            
+        }
+
+        .maindiv div::before {
+            content: "";
+            position: absolute;
+            width: 82px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: plum;
+            top: 40vh;
+            left: -2.5rem;
+            
+        }
+
+
+        .maindiv div:first-child {
+            animation: first 4s linear infinite;
+            transform-origin: top left;
+
+        }
+
+        .maindiv div:last-child {
+            animation: last 4s linear infinite 2s;
+            transform-origin: top left;
+        }
+
+        @keyframes first {
+            0% {
+                rotate: 0deg;
+            }
+
+            25% {
+                rotate: 25deg;
+            }
+
+            50% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 0deg;
+            }
+        }
+
+        @keyframes last {
+            0% {
+                rotate: 0deg;
+            }
+
+            25% {
+                rotate: -25deg;
+            }
+
+            50% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 0deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindiv">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
